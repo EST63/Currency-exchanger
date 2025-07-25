@@ -22,7 +22,11 @@ public class Main {
         String result = convert(sum, choiceType);
         int resultPoint = result.indexOf(".");
         String resultRub = result.substring(0, resultPoint + 3);
-        System.out.println("По текущему курсу сумма составит: " + resultRub);
+        if (choiceType == 1) {
+            System.out.println("Ваша сумма в долларах: " + resultRub + " USD");
+        } else {
+            System.out.println("Ваша сумма в евро: " + resultRub + " EUR");
+        }
         start();
     }
 
